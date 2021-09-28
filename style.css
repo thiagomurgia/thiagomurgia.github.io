@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+}
+
+/* ---=== INITHOME ===--- */
+h1{
+    color: #BDBDBD;
+    display: inline;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 3.5rem;
+}
+#name{
+    color:#C44B4F;
+}
+.home{
+    background-color: #4C5355;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home a{
+    text-decoration: none;
+}
+/* init animation */
+
+.home .anim{
+    position: absolute;
+    width: 60px;
+    height:60px;
+    background-color: transparent;
+    border: 6px solid #C44B4F;
+    top:0;
+    left:0;
+}
+
+.anim:nth-child(1){
+    top:5%;
+    left:12%;
+    animation: animate 10s linear infinite; 
+}
+.anim:nth-child(2){
+    top:21%;
+    left:7%;
+    animation: animate 5s linear infinite; 
+}
+.anim:nth-child(3){
+    top:47%;
+    left:88%;
+    animation: animate 8s linear infinite; 
+}
+.anim:nth-child(4){
+    top:80%;
+    left:72%;
+    animation: animate 2s linear infinite; 
+}
+
+.anim:nth-child(5){
+    top:32%;
+    left:67%;
+    animation: animate 4s linear infinite; 
+}
+
+.anim:nth-child(6){
+    top:15%;
+    left:28%;
+    animation: animate 8s linear infinite; 
+}
+
+.anim:nth-child(7){
+    top:34%;
+    left:57%;
+    animation: animate 10s linear infinite; 
+}
+
+.anim:nth-child(8){
+    top:80%;
+    left:28%;
+    animation: animate 5s linear infinite; 
+}
+
+.anim:nth-child(8){
+    top:70%;
+    left:56%;
+    animation: animate 8s linear infinite; 
+}
+
+.anim:nth-child(9){
+    top:70%;
+    left:10%;
+    animation: animate 10s linear infinite; 
+}
+
+.anim:nth-child(10){
+    top:60%;
+    left:80%;
+    animation: animate 8s linear infinite; 
+}
+
+.anim:nth-child(11){
+    top:60%;
+    left:10%;
+    animation: animate 6s linear infinite; 
+}
+
+.anim:nth-child(12){
+    top:12%;
+    left:88%;
+    animation: animate 9s linear infinite; 
+}
+
+.anim:nth-child(13){
+    top:50%;
+    left:21%;
+    animation: animate 8s linear infinite; 
+}
+
+.anim:nth-child(14){
+    top:32%;
+    left:32%;
+    animation: animate 6s linear infinite; 
+}
+
+.anim:nth-child(15){
+    top:32%;
+    left:50%;
+    animation: animate 8s linear infinite; 
+}
+
+.anim:nth-child(16){
+    top:80%;
+    left:50%;
+    animation: animate 5s linear infinite; 
+}
+
+.anim:nth-child(17){
+    top:80%;
+    left:30%;
+    animation: animate 3s linear infinite; 
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(0) translateY(0) rotate(0);
+        opacity:1;
+    }
+    100%{
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity:0;
+    }
+}
+/* end animation */
+
+.button{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    border: solid 2px #C44B4F;
+    color:#C44B4F;
+    border-radius: 6px;
+    width: 20vw;
+    min-width: 150px;
+    height: 45px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 3.5vw;
+    transition: .3s;
+}
+
+.content{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+}
+
+.div :nth-child(1){
+    margin-right: 12px;
+}
+
+.button:hover{
+    background-color: #C44B4F;
+    color:#BDBDBD;
+}
+
+.content .div:nth-child(2){
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.arrow-right{
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #C44B4F;
+    border-bottom: 10px solid transparent;
+    transition: .3s;
+  }
+
+.active{
+    transition:.3s;
+    transform:rotate(90deg);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #BDBDBD;
+    border-bottom: 10px solid transparent;
+    transition: .3s;
+}
+
+
+
+/* ---=== ENDHOME ===--- */
+
+
+
+
+
+/* ---=== INITABOUT===--- */
+#about{
+    background-color: #4C5355;
+    height: 100vh;
+    position:relative;
+}
+
+.nav-bar{
+    background-color: #C44B4F;
+    display:flex;
+    width:100%;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 1.5rem;
+    height:45px;
+    text-transform: uppercase;
+    display: flex;
+}
+.nav-bar-fixed{
+    position:fixed;
+    top:0;
+    z-index: 1;
+    animation: showmenu .7s;
+}
+
+li a{
+    text-decoration: none;
+    color:#333;
+}
+
+
+@keyframes showmenu {
+    0%{
+        opacity:0;
+        display: hidden;
+    }
+    100%{
+        opacity:1
+    }    
+}
+.nav-bar ul{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav-bar ul li{
+    display: inline;
+    padding: 12px;
+    list-style: none;
+}
+.about-content{
+    display:flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.active-link{
+    color:#BDBDBD;
+}
+
+/* ---=== ENDABOUT ===--- */
+/* @media only screen and (max-width: 684px) {
+    h1{
+        font-size: 3rem;
+    }
+    .home{
+        height:100vh;
+    }
+    .button{
+        font-size: 1.5rem;
+        width: 220px;
+    }
+    .name{
+        text-align: center;
+    }
+    .devel{
+        text-align:center;
+    }
+  }
+
+  @media only screen and (max-width: 632px) {
+    html{
+        overflow-x: hidden;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    .home{
+        height:100vh;
+    }
+    .button{
+        font-size: 1.5rem;
+    }
+
+    .anim:nth-child(1){
+        top:5%;
+        left:12%;
+        animation: animate 10s linear infinite; 
+    }
+    .anim:nth-child(2){
+        top:21%;
+        left:7%;
+        animation: animate 5s linear infinite; 
+    }
+    .anim:nth-child(3){
+        top:47%;
+        left:78%;
+        animation: animate 8s linear infinite; 
+    }
+    .anim:nth-child(4){
+        top:80%;
+        left:72%;
+        animation: animate 2s linear infinite; 
+    }
+    
+    .anim:nth-child(5){
+        top:32%;
+        left:67%;
+        animation: animate 4s linear infinite; 
+    }
+    
+    .anim:nth-child(6){
+        top:15%;
+        left:28%;
+        animation: animate 8s linear infinite; 
+    }
+    
+    .anim:nth-child(7){
+        top:34%;
+        left:57%;
+        animation: animate 10s linear infinite; 
+    }
+    
+    .anim:nth-child(8){
+        top:80%;
+        left:28%;
+        animation: animate 5s linear infinite; 
+    }
+    
+    .anim:nth-child(8){
+        top:70%;
+        left:56%;
+        animation: animate 8s linear infinite; 
+    }
+    
+    .anim:nth-child(9){
+        top:70%;
+        left:10%;
+        animation: animate 10s linear infinite; 
+    }
+    
+    .anim:nth-child(10){
+        top:60%;
+        left:65%;
+        animation: animate 8s linear infinite; 
+    }
+    
+    .anim:nth-child(11){
+        top:60%;
+        left:10%;
+        animation: animate 6s linear infinite; 
+    }
+    
+    .anim:nth-child(12){
+        top:12%;
+        left:70%;
+        animation: animate 9s linear infinite; 
+    }
+    
+    .anim:nth-child(13){
+        top:50%;
+        left:21%;
+        animation: animate 8s linear infinite; 
+    }
+    
+    .anim:nth-child(14){
+        top:32%;
+        left:32%;
+        animation: animate 6s linear infinite; 
+    }
+    
+    .anim:nth-child(15){
+        top:32%;
+        left:50%;
+        animation: animate 8s linear infinite; 
+    }
+    
+    .anim:nth-child(16){
+        top:80%;
+        left:50%;
+        animation: animate 5s linear infinite; 
+    }
+    
+    .anim:nth-child(17){
+        top:80%;
+        left:30%;
+        animation: animate 3s linear infinite; 
+    }
+  }
+  .nav-bar{
+    display:flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px 1px #3e4446;
+}
+
+@media only screen and (max-width: 528px) {
+    .nav-bar{
+        display:flex;
+        font-size: 1em;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-bar ul{
+        margin-left: 0;
+    }
+    .left-div{
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    
+
+  }
+
+@media only screen and (max-width: 380px) {
+    .nav-bar{
+        display:flex;
+        height:20%;
+    }
+    .nav-bar ul li{
+        display:list-item;
+        padding-top: 8px;
+    }
+
+  }
+
+
+@media only screen and (max-width: 300px) {
+    h1{
+        font-size: 2rem;
+    }
+    .home{
+        height:100vh;
+    }
+    .button{
+        font-size: 1rem;
+        width: 180px;
+    }
+  } */
